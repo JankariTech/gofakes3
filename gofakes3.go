@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/base64"
 	"encoding/hex"
-	"encoding/xml"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -16,6 +15,8 @@ import (
 	"strings"
 	"sync/atomic"
 	"time"
+
+	xml "github.com/minio/xxml"
 )
 
 // GoFakeS3 implements HTTP handlers for processing S3 requests and returning
