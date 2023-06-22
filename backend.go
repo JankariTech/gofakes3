@@ -310,7 +310,7 @@ type VersionedBackend interface {
 
 func MergeMetadata(db Backend, bucketName string, objectName string, meta map[string]string) error {
 	// get potential existing object to potentially carry metadata over
-	existingObj, err := db.GetObject(bucketName, objectName, nil)
+	existingObj, err := db.GetObject("", bucketName, objectName, nil)
 	if err != nil {
 		if awsErr, ok := err.(awserr.Error); ok && awsErr.Code() != string(ErrNoSuchKey) {
 			return err
