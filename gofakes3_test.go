@@ -374,7 +374,7 @@ func TestCopyObject(t *testing.T) {
 		ts.Fatal("bad etag", *out.CopyObjectResult.ETag)
 	}
 
-	obj, err := ts.backend.GetObject(defaultBucket, "dst-key", nil)
+	obj, err := ts.backend.GetObject("", defaultBucket, "dst-key", nil)
 	ts.OK(err)
 
 	defer obj.Contents.Close()
