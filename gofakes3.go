@@ -42,8 +42,6 @@ type GoFakeS3 struct {
 
 	// simple v4 signature
 	v4AuthPair map[string]string
-
-	request *http.Request
 }
 
 // New creates a new GoFakeS3 using the supplied Backend. Backends are pluggable.
